@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,60 +13,53 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeWorkTrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJX-l9-VnQ">
-                                <rect key="frame" x="90" y="708.33333333333337" width="195" height="60.666666666666629"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ecf-q9-YhK">
+                                <rect key="frame" x="143" y="243" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-K1-2sG">
+                                <rect key="frame" x="143" y="393" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hC-67-BYM">
+                                <rect key="frame" x="143" y="721" width="128" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start" subtitle="" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="39"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="changeTrafficLightDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYk-pF-M4C"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="JRl-gH-WFC">
-                                <rect key="frame" x="133" y="96.999999999999972" width="109" height="468.33333333333326"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkO-dj-i0g">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="132"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                        <color key="tintColor" systemColor="systemPinkColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbC-Yy-02X">
-                                        <rect key="frame" x="0.0" y="168" width="109" height="132.33333333333337"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeP-ja-fEK">
-                                        <rect key="frame" x="0.0" y="336.33333333333331" width="109" height="132"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <color key="tintColor" systemColor="systemGreenColor"/>
-                                    </view>
-                                </subviews>
-                            </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1a-WV-Ex5">
+                                <rect key="frame" x="143" y="88" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <constraints>
-                            <constraint firstItem="JRl-gH-WFC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="7w7-qr-21A"/>
-                            <constraint firstItem="MJX-l9-VnQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="AwD-PO-Oof"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MJX-l9-VnQ" secondAttribute="bottom" constant="9" id="Lmv-QJ-kxF"/>
-                            <constraint firstItem="JRl-gH-WFC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="YDR-Bn-taj"/>
-                            <constraint firstItem="MJX-l9-VnQ" firstAttribute="top" secondItem="JRl-gH-WFC" secondAttribute="bottom" constant="143" id="dhg-NO-g6O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MJX-l9-VnQ" secondAttribute="trailing" constant="90" id="nvT-5E-s2S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JRl-gH-WFC" secondAttribute="trailing" constant="133" id="pUN-Uz-X1M"/>
-                        </constraints>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="greenLightLabel" destination="HeP-ja-fEK" id="Gh8-9j-QCO"/>
-                        <outlet property="redLightLabel" destination="SkO-dj-i0g" id="J3B-3z-EmZ"/>
-                        <outlet property="yellowLightLabel" destination="mbC-Yy-02X" id="8bv-q7-KzN"/>
+                        <outlet property="greenLightView" destination="Qvi-K1-2sG" id="4rV-Ap-2sO"/>
+                        <outlet property="redLightView" destination="d1a-WV-Ex5" id="H9B-48-eF8"/>
+                        <outlet property="trafficLightButton" destination="8hC-67-BYM" id="fy1-DK-mYR"/>
+                        <outlet property="yellowLightView" destination="Ecf-q9-YhK" id="8dn-Ue-KVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57.209302325581397" y="-2.5751072961373391"/>
+            <point key="canvasLocation" x="56.521739130434788" y="-2.6785714285714284"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

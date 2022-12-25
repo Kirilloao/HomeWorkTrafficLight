@@ -8,19 +8,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-   
-    @IBOutlet var greenLightLabel: UIView!
-    @IBOutlet var yellowLightLabel: UIView!
-    @IBOutlet var redLightLabel: UIView!
+    
+    
+    
+    @IBOutlet var redLightView: UIView!
+    @IBOutlet var yellowLightView: UIView!
+    @IBOutlet var greenLightView: UIView!
+    @IBOutlet var trafficLightButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redLightLabel.layer.cornerRadius = 20
-        yellowLightLabel.layer.cornerRadius = 20
-        greenLightLabel.layer.cornerRadius = 20
+        redLightView.layer.cornerRadius = 63
+        yellowLightView.layer.cornerRadius = 63
+        greenLightView.layer.cornerRadius = 63
+        
+        trafficLightButton.setTitle("Start", for: .normal)
+        
+        redLightView.alpha = 0.3
+        yellowLightView.alpha = 0.3
+        greenLightView.alpha = 0.3
+        
     }
+    
+    @IBAction func changeTrafficLightDidTapped() {
+        trafficLightButton.setTitle("Next", for: .normal)
+        
+        
+        
+    }
+    
 
-
+    
+   
+    
 }
-
