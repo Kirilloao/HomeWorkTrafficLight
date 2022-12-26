@@ -28,17 +28,36 @@ class ViewController: UIViewController {
         yellowLightView.alpha = 0.3
         greenLightView.alpha = 0.3
         
+        
     }
     
-    @IBAction func changeTrafficLightDidTapped() {
+    @IBAction func changeButtonTrafficLightDidTapped() {
         trafficLightButton.setTitle("Next", for: .normal)
         
+        enum Traffic {
+            case red
+            case yellow
+            case green
+            
+        }
+        var hello: Traffic = .yellow
         
+        switch hello {
+            
+        case .red:
+            redLightView.alpha = 1
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 0.3
+        case .yellow:
+            yellowLightView.alpha = 1
+            redLightView.alpha = 0.3
+            greenLightView.alpha = 0.3
+        case .green:
+            greenLightView.alpha = 1
+            yellowLightView.alpha = 0.3
+            redLightView.alpha = 0.3
+        }
         
+      
     }
-    
-
-    
-   
-    
 }
