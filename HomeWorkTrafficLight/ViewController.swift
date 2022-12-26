@@ -31,33 +31,31 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func changeButtonTrafficLightDidTapped() {
+    enum Traffic {
+        case red
+        case yellow
+        case green
+        
+    }
+    var lights: Traffic = .red
+    
+    @IBAction func buttonTrafficLightDidTapped() {
         trafficLightButton.setTitle("Next", for: .normal)
-        
-        enum Traffic {
-            case red
-            case yellow
-            case green
-            
-        }
-        var hello: Traffic = .yellow
-        
-        switch hello {
+
+        switch lights {
             
         case .red:
             redLightView.alpha = 1
-            yellowLightView.alpha = 0.3
             greenLightView.alpha = 0.3
+            lights = .yellow
         case .yellow:
             yellowLightView.alpha = 1
             redLightView.alpha = 0.3
-            greenLightView.alpha = 0.3
+            lights = .green
         case .green:
             greenLightView.alpha = 1
             yellowLightView.alpha = 0.3
-            redLightView.alpha = 0.3
+            lights = .red
         }
-        
-      
     }
 }
