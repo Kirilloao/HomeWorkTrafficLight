@@ -18,17 +18,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redLightView.layer.cornerRadius = 63
-        yellowLightView.layer.cornerRadius = 63
-        greenLightView.layer.cornerRadius = 63
+        
+        redLightView.layer.cornerRadius = 60
+        yellowLightView.layer.cornerRadius = 60
+        greenLightView.layer.cornerRadius = 60
         
         trafficLightButton.setTitle("Start", for: .normal)
+        trafficLightButton.layer.cornerRadius = 15
         
         redLightView.alpha = 0.3
         yellowLightView.alpha = 0.3
         greenLightView.alpha = 0.3
-        
-        
+ 
     }
     
     enum Traffic {
@@ -58,4 +59,5 @@ class ViewController: UIViewController {
             lights = .red
         }
     }
+
 }
